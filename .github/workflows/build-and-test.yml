@@ -42,7 +42,7 @@ jobs:
         run: >
           docker run 
           --add-host=host.docker.internal:host-gateway 
-          -e ACTIVE_CONFIG_FILE_PATH=/noname/config.json 
+          -e ACTIVE_CONFIG_FILE_PATH=/noname/active-config.json 
           -v $(pwd)/noname:/noname 
           -v $(pwd)/openapi_specs:/openapi_specs 
           jfrog.cicd.nonamesec.com/noname-docker-release/active-cli:$(curl -k ${{secrets.ACTIVE_API_URL}}/backend/version) scan 
