@@ -29,7 +29,7 @@ jobs:
         run: |
           npm install
           node .
-        working-directory: /noname/baseline-script
+        working-directory: noname/baseline-script
 
       - name: Docker login
         uses: docker/login-action@v1 
