@@ -20,10 +20,12 @@ jobs:
       - name: Test if CrAPI is up
         run: sleep 5 && curl http://localhost:8888/ --retry 10 --retry-delay 1 
 
-      - name: Add users to CrAPI
+      - name: setup node dependencies for adding users
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+
+      - name: Add users to CrAPI
         run: |
           npm install
           node .
