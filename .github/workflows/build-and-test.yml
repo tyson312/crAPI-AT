@@ -22,8 +22,8 @@ jobs:
 
       - name: Add users to CrAPI
         uses: actions/setup-node@v3
-          with:
-            node-version: '16'
+        with:
+          node-version: '16'
         run: |
           npm install
           node .
