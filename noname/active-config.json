@@ -1,7 +1,49 @@
 {
   "version": "1.0.0",
   "applicationId": "74068686-4900-4707-8991-01a8b2317b58",
-  "host": "http://localhost",
-  "sources": [],
-  "auths": []
+  "host": "http://localhost:8888",
+  "sources": [
+    {
+      "name": "crapi",
+      "openApi": {
+        "sourcePath": "/openapi-spec/crapi-spec.json"
+      }
+    }
+  ],
+  "auths": [
+    {
+      "name": "Jane Doe",
+      "role": "reader / writer",
+      "secrets": [
+        {
+          "name": "postman",
+          "postman": {
+            "sourceInline": "{\"info\":{\"_postman_id\":\"6e3b00fc-5eb8-4ce9-a0ee-46f70dc9cdcf\",\"name\":\"janeDoe.postman_collection.json\",\"schema\":\"https://schema.getpostman.com/json/collection/v2.1.0/collection.json\",\"_exporter_id\":\"20999705\"},\"item\":[{\"name\":\"Login\",\"request\":{\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"email\\\": \\\"jane.doe@fake.com\\\",\\n    \\\"password\\\": \\\"crapiNoname!\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"http://localhost:8888/identity/api/auth/login\",\"protocol\":\"http\",\"host\":[\"localhost:8888\"],\"path\":[\"identity\",\"api\",\"auth\",\"login\"]}},\"response\":[]}]}",
+            "sourceBody": "$.token",
+            "targetHeader": {
+              "headerKey": "Authorization",
+              "headerValueTemplate": "Bearer {}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "John Smith",
+      "role": "reader / writer",
+      "secrets": [
+        {
+          "name": "postman",
+          "postman": {
+            "sourceInline": "{\"info\":{\"_postman_id\":\"ffd754d0-b698-4f90-99f3-e68542bdcd25\",\"name\":\"johnSmith.postman_collection.json\",\"schema\":\"https://schema.getpostman.com/json/collection/v2.1.0/collection.json\",\"_exporter_id\":\"20999705\"},\"item\":[{\"name\":\"Login\",\"request\":{\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"email\\\": \\\"john.smith@fake.com\\\",\\n    \\\"password\\\": \\\"crapiNoname!\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"http://localhost/identity/api/auth/login\",\"protocol\":\"http\",\"host\":[\"localhost:8888\"],\"path\":[\"identity\",\"api\",\"auth\",\"login\"]}},\"response\":[]}]}",
+            "sourceBody": "$.token",
+            "targetHeader": {
+              "headerKey": "Authorization",
+              "headerValueTemplate": "Bearer {}"
+            }
+          }
+        }
+      ]
+    }
+  ]
 }
