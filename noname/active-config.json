@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "applicationId": "74068686-4900-4707-8991-01a8b2317b58",
-  "host": "http://localhost",
+  "host": "http://host.docker.internal",
   "sources": [
     {
       "name": "crapi",
