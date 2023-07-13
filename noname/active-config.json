@@ -6,7 +6,7 @@
     {
       "name": "crapi",
       "openApi": {
-        "sourcePath": "/openapi-spec/crapi-spec.json"
+        "sourcePath": "openapi-spec/crapi-spec.json"
       }
     }
   ],
