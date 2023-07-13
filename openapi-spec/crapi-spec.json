@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "https://travelers-crapi.nnsworkshop.com"
+      "url": "https://localhost:8888"
     }
   ],
   "paths": {
