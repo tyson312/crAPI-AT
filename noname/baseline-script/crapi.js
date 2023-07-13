@@ -13,7 +13,7 @@ export async function crapiRequest(url, method, data, headers, params) {
       data,
       params,
       headers: { ...headers, 'Content-Type': 'application/json' },
-      baseURL: `https://${config.crapi}`,
+      baseURL: `http://${config.crapi}`,
     })
       .then(resp => resolve(resp))
       .catch(err => reject(err))
@@ -112,7 +112,7 @@ export async function makeMechanicReport(user, vin, mechanic_code, problem_detai
       vin,
       mechanic_code,
       problem_details,
-      mechanic_api: `https://${config.crapi}/workshop/api/mechanic/receive_report`,
+      mechanic_api: `http://${config.crapi}/workshop/api/mechanic/receive_report`,
       repeat_request_if_failed: false,
       number_of_repeats: 1,
     },

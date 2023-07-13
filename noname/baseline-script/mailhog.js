@@ -9,7 +9,7 @@ export async function mailhogRequest(url, method, data, params, headers) {
       data,
       params,
       headers: { ...headers, 'Content-Type': 'application/json' },
-      baseURL: `https://${config.mailhog}/api`,
+      baseURL: `http://${config.mailhog}/api`,
     })
       .then(resp => resolve(resp))
       .catch(err => reject(err))

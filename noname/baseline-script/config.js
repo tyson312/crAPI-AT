@@ -1,5 +1,5 @@
 export default {
-	crapi: 'localhost:8888',
+	crapi: 'localhost',
   mailhog: 'localhost:8025',
   vinRegex: /\b[(A-Z|0-9)]{17}\b/gm,
   pinRegex: />(\d{4})<\/font>/,
