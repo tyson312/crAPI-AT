@@ -45,7 +45,7 @@ jobs:
           -e ACTIVE_CONFIG_FILE_PATH=/noname/active-config.json 
           -v $(pwd)/noname:/noname 
           -v $(pwd)/openapi-spec:/openapi-spec 
-          jfrog.cicd.nonamesec.com/nns-docker/active-cli:2.17.0 scan 
+          jfrog.cicd.nonamesec.com/nns-docker/active-cli:$(curl -k ${{env.ACTIVE_API_URL}}/backend/version) scan 
           --api-url=${{ secrets.ACTIVE_API_URL }} 
           --api-token=${{ secrets.ACTIVE_API_TOKEN }} 
           --test-group-id=892b51de-67cf-4328-beea-3ade61bcdeb2
